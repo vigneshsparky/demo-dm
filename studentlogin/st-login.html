@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Dragon Media Academy</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/_forms.css">
+    <link rel="stylesheet" href="css/components/_auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional login-specific styles */
+        .login-hero {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(59, 130, 246, 0.9)), 
+                        url('../images/login-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        
+        .login-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .login-content {
+            text-align: left;
+        }
+        
+        .login-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .login-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .login-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Hero Section -->
+    <section class="login-hero">
+        <div class="login-container">
+            <div class="login-content">
+                <img src="images/logo-white.png" alt="Dragon Media Academy" width="180">
+                <h1>Welcome Back!</h1>
+                <p>Access your personalized learning dashboard, course materials, and track your progress.</p>
+                
+                <div class="login-features">
+                    <div class="feature-item">
+                        <i class="fas fa-book-open"></i>
+                        <span>Continue your courses</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Track your progress</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Access certificates</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="login-box">
+                <div class="login-header">
+                    <h2>Student Login</h2>
+                    <p>Enter your credentials to access your account</p>
+                </div>
+                
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" name="email" placeholder="student@example.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" name="password" placeholder="••••••••" required>
+                        </div>
+                        <div class="password-options">
+                            <label class="remember-me">
+                                <input type="checkbox" name="remember"> Remember me
+                            </label>
+                            <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                    
+                    <div class="auth-divider">
+                        <span>or continue with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <a href="#" class="social-btn google">
+                            <img src="images/icons/google.svg" alt="Google">
+                            Google
+                        </a>
+                        <a href="#" class="social-btn facebook">
+                            <img src="images/icons/facebook.svg" alt="Facebook">
+                            Facebook
+                        </a>
+                    </div>
+                    
+                    <div class="auth-footer">
+                        Don't have an account? <a href="signup.html" class="auth-link">Sign up now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Success Modal (Hidden) -->
+    <div class="modal" id="loginSuccessModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Login Successful!</h3>
+            <p>Redirecting to your dashboard...</p>
+            <div class="loader">
+                <div class="loader-spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth/userAuth.js"></script>
+    <script>
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Simple validation
+            if(email && password) {
+                // Show success modal
+                document.getElementById('loginSuccessModal').style.display = 'flex';
+                
+                // Simulate login process
+                setTimeout(() => {
+                    window.location.href = 'student-dashboard.html';
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

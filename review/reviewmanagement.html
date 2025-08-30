@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Management - Dragon Media Academy</title>
+    <link rel="stylesheet" href="reviewmanagement.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/admin.css">
+    <link rel="stylesheet" href="css/components/tables.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-dashboard">
+    <!-- Admin Header and Sidebar same as dashboard -->
+
+    <main class="admin-content">
+        <div class="content-header">
+            <h2><i class="fas fa-star"></i> Review Management</h2>
+            <div class="breadcrumb">
+                <a href="admindashboard.html">Home</a> / <span>Reviews</span>
+            </div>
+        </div>
+        
+        <div class="review-tabs">
+            <button class="tab-btn active" data-tab="pending">Pending Approval</button>
+            <button class="tab-btn" data-tab="approved">Approved Reviews</button>
+            <button class="tab-btn" data-tab="testimonials">Testimonials</button>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <div class="review-list" id="pendingReviews">
+                    <!-- Pending reviews will be loaded here -->
+                </div>
+                
+                <div class="review-list" id="approvedReviews" style="display: none;">
+                    <!-- Approved reviews will be loaded here -->
+                </div>
+                
+                <div class="review-list" id="testimonials" style="display: none;">
+                    <!-- Testimonials will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="reviewmanagement.js"></script>
+</body>
+</html>

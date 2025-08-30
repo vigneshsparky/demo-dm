@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management - Dragon Media Academy</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="studentmanagement.css">
+    <link rel="stylesheet" href="css/components/admin.css">
+    <link rel="stylesheet" href="css/components/tables.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-dashboard">
+    <!-- Admin Header and Sidebar same as dashboard -->
+
+    <main class="admin-content">
+        <div class="content-header">
+            <h2><i class="fas fa-users"></i> Student Management</h2>
+            <div class="breadcrumb">
+                <a href="admindashboard.html">Home</a> / <span>Students</span>
+            </div>
+        </div>
+        
+        <div class="action-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search students..." id="studentSearch">
+            </div>
+            <div class="filter-group">
+                <label>Filter:</label>
+                <select id="studentFilter">
+                    <option value="all">All Students</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="new">New Registrations</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student</th>
+                            <th>Email</th>
+                            <th>Courses</th>
+                            <th>Joined</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <button class="btn btn-outline" id="prevStudentPage"><i class="fas fa-chevron-left"></i></button>
+                    <span class="page-info">Page 1 of 5</span>
+                    <button class="btn btn-outline" id="nextStudentPage"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="studentmanagement.js"></script>
+</body>
+</html>

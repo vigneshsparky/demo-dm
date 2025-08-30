@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Media Academy</title>
+    <meta name="description"
+        content="Transform your career with our industry-focused courses in development, design, and business">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/dm-logo.png" type="image/x-icon">
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/components/admin.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <!-- <link rel="stylesheet" href="css/components/carousel.css"> -->
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/tables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <img src="images/logo.png" alt="logo" class="cmp-logo">
+            <a href="index.html" class="logo">
+                <span>Dragon Media </span>
+            </a>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item auth-buttons">
+                        <a href="studentlogin/st-login.html" target="_blank" class="btn btn-outline btn-small">Login</a>
+                        <a href="studentsignup/st-signup.html" target="_blank" class="btn btn-primary btn-small">Sign
+                            Up</a>
+                        <a href="admindasboard/admin.html" target="_blank" class="btn btn-secondary btn-small">Admin
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+        <div class="head-menu-2">
+            <nav class="navbar-2">
+                <ul class="nav-menu-2">
+
+                    <li class="nav-item" data-tooltip="Home">
+                        <a href="#home" class="nav-link active"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="nav-item" data-tooltip="About">
+                        <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i></a>
+                    </li>
+                    <li class="nav-item" data-tooltip="Services">
+                        <a href="#services" class="nav-link"><i class="fas fa-cogs"></i></a>
+                    </li>
+                    <li class="nav-item" data-tooltip="Courses">
+                        <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap"></i></a>
+                    </li>
+                    <li class="nav-item" data-tooltip="Internships">
+                        <a href="#internships" class="nav-link"><i class="fas fa-briefcase"></i></a>
+                    </li>
+                    <li class="nav-item" data-tooltip="Testimonials">
+                        <a href="#testimonials" class="nav-link"><i class="fas fa-quote-left"></i></a>
+                    </li>
+                    <li class="nav-item" data-tooltip="Contact">
+                        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-text">Transform Your Career with Industry-Ready Skills</h1>
+                <p class="hero-subtitle">Join Thanjavur premier tech education platform with 100% placement support</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="signup.html" class="btn btn-secondary">Join Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="hero-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div> -->
+
+
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">About <span>Our Dragon Media </span></h2>
+                    <p>Dragon Media Academy is a premier institution dedicated to bridging the gap between academia and
+                        industry requirements. Founded in 2023, we've successfully trained over 350+ students with a
+                        placement rate of 98%.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Industry Experts</h3>
+                            <p>Learn from professionals with 10+ years of experience</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Hands-on Training</h3>
+                            <p>Practical projects in every course</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Placement Support</h3>
+                            <p>Dedicated placement cell</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-company.png" alt="Students learning at Dragon Media Academy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="service-section" id="services">
+        <div class="services-container">
+            <h2 class="services-heading">Our <span>Services</span></h2>
+            <p class="services-subheading">Comprehensive programs designed for career transformation</p>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-inner" id="carouselInner">
+                    <!-- Service cards will be generated by JavaScript -->
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="ctrl-btnS prev-btnS" id="prevBtnS" aria-label="Previous services" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="ctrl-btnS next-btnS" id="nextBtnS" aria-label="Next services">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carousel-indicators" id="carouselIndicatorsS">
+                    <!-- Indicators will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span>
+                        <!-- <i class="fas fa-user-graduate"></i> -->
+                        <img src="images/stats-icon-1.png" alt="icon" class="stats-icon">
+                    </span>
+                    <span class="stats-part">
+                        <span class="sub-stats">
+                            <div class="stat-number" data-count="200">0 </div> <i class="fa-solid fa-plus fa-xl"></i>
+                        </span>
+                        <div class="stat-title">Students <br> Trained</div>
+                    </span>
+                </div>
+                <div class="stat-item">
+                    <span>
+                        <img src="images/stats-icon-1.png" alt="icon" class="stats-icon">
+                    </span>
+                    <span class="stats-part">
+                        <span class="sub-stats">
+                            <div class="stat-number" data-count="160">0 </div> <i class="fa-solid fa-plus fa-xl"></i>
+                        </span>
+                        <div class="stat-title">Students <br> Placed</div>
+                    </span>
+                </div>
+                <div class="stat-item">
+                    <span>
+                        <img src="images/stats-icon-1.png" alt="icon" class="stats-icon">
+                    </span>
+                    <span class="stats-part">
+                        <span class="sub-stats">
+                            <div class="stat-number" data-count="12">0 </div> <i class="fa-solid fa-plus fa-xl"></i>
+                        </span>
+                        <div class="stat-title">Partner <br> Companies</div>
+                    </span>
+                </div>
+                <div class="stat-item">
+                    <span>
+                        <img src="images/stats-icon-1.png" alt="icon" class="stats-icon">
+                    </span>
+                    <span class="stats-part">
+                        <span class="sub-stats">
+                            <div class="stat-number" data-count="24">0 </div> <i class="fa-solid fa-plus fa-xl"></i>
+                        </span>
+                        <div class="stat-title">Projects <br> Completed</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose section">
+        <div class="container">
+            <h2 class="section-title">Why <span>Choose Us?</span></h2>
+            <p class="section-subtitle">Here's what makes us different from traditional education</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industry-Aligned Curriculum</h3>
+                    <p>Courses designed with direct input from tech companies to ensure relevance</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from professionals with 8+ years of industry experience</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Project-Based Learning</h3>
+                    <p>Build portfolio-worthy projects in every course</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Career Services</h3>
+                    <p>Resume reviews, mock interviews, and placement support</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>1:1 Mentorship</h3>
+                    <p>Personalized guidance from industry mentors</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Recognized Certification</h3>
+                    <p>Industry-recognized certificates upon completion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses section" id="courses">
+        <div class="container">
+            <h2 class="section-title">Popular <span>Courses</span></h2>
+            <p class="section-subtitle">Browse our most in-demand programs</p>
+
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All Courses</button>
+                <button class="tab-btn" data-category="development">Development</button>
+                <button class="tab-btn" data-category="design">Design</button>
+                <button class="tab-btn" data-category="business">Business</button>
+            </div>
+
+            <div class="courses-carousel">
+                <button class="carousel-btn prev-btn-cr"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="course-track">
+                    <!-- course 1 -->
+                    <div class="course-card" data-category="development">
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Full Stack Web Development">
+                            <div class="course-tag">Bestseller</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Full Stack Web Development</h3>
+                            <p>Master HTML, CSS, JavaScript, React, Node.js, MongoDB and build real-world projects.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 3 Months</span>
+                                <span><i class="fas fa-user-graduate"></i> 120+ Enrolled</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (320)</span>
+                            </div>
+                            <a href="#" class="btn btn-small">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- course 2 -->
+                    <div class="course-card" data-category="design">
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="UI/UX Design">
+                            <div class="course-tag">Trending</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>UI/UX Design <br> Masterclass</h3>
+                            <p>Learn user-centered design principles, wireframing, prototyping with Figma and Adobe XD.
+                            </p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 2 Months</span>
+                                <span><i class="fas fa-user-graduate"></i> 85+ Enrolled</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0 (210)</span>
+                            </div>
+                            <a href="#" class="btn btn-small">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- course 3 -->
+                    <div class="course-card" data-category="design">
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Mobile App Development">
+                            <div class="course-tag">New</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Mobile App <br>Development</h3>
+                            <p>Build cross-platform mobile apps with React Native and Flutter from scratch.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 4 Months</span>
+                                <span><i class="fas fa-user-graduate"></i> 65+ Enrolled</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (150)</span>
+                            </div>
+                            <a href="#" class="btn btn-small">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- course 4 -->
+                    <div class="course-card" data-category="business">
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Digital Marketing">
+                            <div class="course-tag">Popular</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Digital Marketing <br> Strategy</h3>
+                            <p>Master SEO, social media marketing, email campaigns, and Google Analytics.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 2 Months</span>
+                                <span><i class="fas fa-user-graduate"></i> 95+ Enrolled</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (280)</span>
+                            </div>
+                            <a href="#" class="btn btn-small">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- course 5 -->
+                    <div class="course-card" data-category="development">
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Python Programming">
+                            <div class="course-tag">Bestseller</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Python <br>Programming</h3>
+                            <p>Learn Python from basics to advanced concepts including data science and automation.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 3 Months</span>
+                                <span><i class="fas fa-user-graduate"></i> 110+ Enrolled</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0 (340)</span>
+                            </div>
+                            <a href="#" class="btn btn-small">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- course 6 -->
+                    <div class="course-card" data-category="business">
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Business Analytics">
+                            <div class="course-tag">New</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Business Analytics <br> <span></span></h3>
+                            <p>Learn data-driven decision making with Excel, SQL, and Tableau for business insights.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 2.5 Months</span>
+                                <span><i class="fas fa-user-graduate"></i> 75+ Enrolled</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (190)</span>
+                            </div>
+                            <a href="#" class="btn btn-small">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn-cr"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="text-center">
+                <a href="courses.html" class="btn btn-outline">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">Our <span>Partners</span></h2>
+            <p class="section-subtitle">Trusted by leading companies for talent acquisition</p>
+
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="images/partner-comp-1.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-comp-2.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-comp-1.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-comp-2.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-comp-1.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-comp-2.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-comp-1.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-comp-2.png" alt="Partner Company" class="partner-logo grayscale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Internship Program Section -->
+    <section class="internship section" id="internships">
+        <div class="container">
+            <h2 class="section-title">Guaranteed <span>Internship Program</span></h2>
+            <p class="section-subtitle">6-month intensive program with stipend and job opportunities</p>
+
+            <div class="internship-carousel">
+                <div class="internship-card">
+                    <div class="internship-img">
+                        <img src="images/c1-web-development.png" alt="Full Stack Development Internship">
+                    </div>
+                    <div class="internship-content">
+                        <h3>Full Stack Development</h3>
+                        <div class="internship-meta">
+                            <span><i class="fas fa-rupee-sign"></i> 15,000/month stipend</span>
+                            <span><i class="fas fa-users"></i> 85% placement rate</span>
+                        </div>
+                        <p>Build enterprise-grade applications using modern technologies</p>
+                        <a href="#" class="btn btn-small">Apply Now</a>
+                    </div>
+                </div>
+                <div class="internship-card">
+                    <div class="internship-img">
+                        <img src="images/c1-web-development.png" alt="Full Stack Development Internship">
+                    </div>
+                    <div class="internship-content">
+                        <h3>Full Stack Development</h3>
+                        <div class="internship-meta">
+                            <span><i class="fas fa-rupee-sign"></i> 15,000/month stipend</span>
+                            <span><i class="fas fa-users"></i> 85% placement rate</span>
+                        </div>
+                        <p>Build enterprise-grade applications using modern technologies</p>
+                        <a href="#" class="btn btn-small">Apply Now</a>
+                    </div>
+                </div>
+                <div class="internship-card">
+                    <div class="internship-img">
+                        <img src="images/c1-web-development.png" alt="Full Stack Development Internship">
+                    </div>
+                    <div class="internship-content">
+                        <h3>Full Stack Development</h3>
+                        <div class="internship-meta">
+                            <span><i class="fas fa-rupee-sign"></i> 15,000/month stipend</span>
+                            <span><i class="fas fa-users"></i> 85% placement rate</span>
+                        </div>
+                        <p>Build enterprise-grade applications using modern technologies</p>
+                        <a href="#" class="btn btn-small">Apply Now</a>
+                    </div>
+                </div>
+                <div class="internship-card">
+                    <div class="internship-img">
+                        <img src="images/c1-web-development.png" alt="Full Stack Development Internship">
+                    </div>
+                    <div class="internship-content">
+                        <h3>Full Stack Development</h3>
+                        <div class="internship-meta">
+                            <span><i class="fas fa-rupee-sign"></i> 15,000/month stipend</span>
+                            <span><i class="fas fa-users"></i> 85% placement rate</span>
+                        </div>
+                        <p>Build enterprise-grade applications using modern technologies</p>
+                        <a href="#" class="btn btn-small">Apply Now</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="certificates section" id="certificates">
+        <div class="container">
+            <h2 class="section-title">Internship <span>Certificates</span></h2>
+            <p class="section-subtitle">Recognized certifications that boost your career</p>
+
+            <div class="certificate-grid">
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                            alt="Full Stack Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Full Stack Developer</h3>
+                        <p>Certification in building complete web applications with frontend and backend technologies.
+                        </p>
+                        <a href="#" class="btn btn-small">View Sample</a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                            alt="Data Science Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Data Science Professional</h3>
+                        <p>Certification in data analysis, machine learning, and statistical modeling.</p>
+                        <a href="#" class="btn btn-small">View Sample</a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                            alt="UI/UX Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>UI/UX Design Specialist</h3>
+                        <p>Certification in user interface design, user experience research, and prototyping.</p>
+                        <a href="#" class="btn btn-small">View Sample</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div class="certificate-modal" id="certificateModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption"></div>
+    </div>
+
+
+    <!-- Video Reviews Section -->
+    <section class="video-reviews section" id="videoReviews">
+        <div class="container">
+            <h2 class="section-title">Student <span>Video Reviews</span></h2>
+            <p class="section-subtitle">Hear directly from our successful alumni</p>
+
+            <div class="video-carousel">
+                <button class="video-prev" aria-label="Previous video"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="video-track">
+                    <div class="video-item">
+                        <video controls playsinline poster="images/yt-thumnail.png">
+                            <source src="videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Karthik - Placed at Amazon</div>
+                    </div>
+
+                    <div class="video-item">
+                        <video controls playsinline poster="images/yt-thumnail.png">
+                            <source src="videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Priya - Placed at Microsoft</div>
+                    </div>
+
+                    <div class="video-item">
+                        <video controls playsinline poster="images/yt-thumnail.png">
+                            <source src="videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Rahul - Placed at Google</div>
+                    </div>
+                </div>
+
+                <button class="video-next" aria-label="Next video"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our <span>Students Say</span></h2>
+            <p class="section-subtitle">Success stories from our alumni community</p>
+            <div class="testimonial-wrapper">
+                <div class="testimonials-content">
+                    <div class="testimonial-carousel">
+                        <!-- Existing testimonials -->
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-text">
+                                "The Full Stack Web Development course transformed my career. Within 2 months of
+                                completion, I got placed as a React developer with a 6 LPA package. The hands-on project
+                                approach was exceptional."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="images/student-1.png" alt="Karthik Rajan">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Karthik Rajan</h4>
+                                    <p>Software Engineer, Chennai</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide">
+                            <div class="testimonial-text">
+                                "The Python AI course gave me a strong foundation in machine learning. The faculty's
+                                industry experience helped me understand real-world applications. I'm now working on an
+                                AI startup with my classmates."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="images/student-2.png" alt="Priya Lakshmi">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Priya Lakshmi</h4>
+                                    <p>AI Researcher, Bangalore</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide">
+                            <div class="testimonial-text">
+                                "As a mechanical engineer, I never thought I could switch to IT. The placement training
+                                and interview preparation sessions were incredibly helpful. Got placed in TCS through
+                                campus recruitment."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="images/student-3.png" alt="Arun Kumar">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Arun Kumar</h4>
+                                    <p>System Engineer, Mumbai</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-dots">
+                        <!-- Dots will be added dynamically by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="testimonial-form">
+                    <h3>Share Your Experience</h3>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <input type="text" id="reviewName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="reviewEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="reviewPosition" placeholder="Your Position" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="reviewLocation" placeholder="Your Location" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="reviewCourse" required>
+                                <option value="">Select Course</option>
+                                <option value="web">Web Development</option>
+                                <option value="python">Python & AI</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="marketing">Digital Marketing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewImage">Your Photo (Optional)</label>
+                            <input type="file" id="reviewImage" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <div class="rating-input">
+                                <span>Your Rating:</span>
+                                <div class="stars-wrapper">
+                                    <div class="stars-outline">
+                                        <i class="far fa-star" data-rating="1"></i>
+                                        <i class="far fa-star" data-rating="2"></i>
+                                        <i class="far fa-star" data-rating="3"></i>
+                                        <i class="far fa-star" data-rating="4"></i>
+                                        <i class="far fa-star" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="reviewRating" value="0" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="reviewMessage" placeholder="Your Review" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section">
+        <div class="container">
+            <h2 class="section-title">Frequently <span>Asked Questions</span></h2>
+            <p class="section-subtitle">Find answers to common questions about our programs</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the duration of your courses?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our courses range from 2 months to 6 months depending on the program. Full-time intensive
+                            programs are typically 3 months, while part-time programs may take 6 months.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer job placement assistance?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we have a dedicated career services team that helps with resume building, interview
+                            preparation, and connecting students with our network of employer partners.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the prerequisites for enrollment?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most of our beginner courses require no prior experience. For advanced programs, we typically
+                            require basic knowledge in the field or completion of our introductory courses.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I pay in installments?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer flexible payment plans. You can choose to pay in 2-4 installments depending on
+                            the program duration and cost.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer online learning options?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our programs are available both in-person at our campuses and through our
+                            interactive online platform. You can choose the format that works best for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Career?</h2>
+                <p>Limited seats available for our next batch starting soon!</p>
+                <a href="signup.html" class="btn btn-large pulse-animate">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" >
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo-white.png" alt="Dragon Media Academy">
+                    </div>
+                    <p>Thanjavur Premier tech education institute providing industry-relevant training since 2023.IT
+                        Services and Products Solution Company.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#internships">Internships</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> NO:16, 1nd Floor, S.S Nagar, Near R.R Nagar,Upstairs
+                            to K.K Multispeciality Clinic, Thanjavur -5.</li>
+                        <li><i class="fas fa-phone"></i> +91 7449144603 <br>+91 8148544603</li>
+                        <li><i class="fas fa-envelope"></i> dmtechpro.tn49@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new courses and offers.</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2023 Dragon Media Academy. All Rights Reserved.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/917449144603" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <!-- JavaScript Libraries -->
+
+
+
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/servicecard.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/course.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/certificate.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/testimonial.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/faq.js"></script>
+    
+
+</body>
+
+</html>

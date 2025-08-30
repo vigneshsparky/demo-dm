@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Dragon Media Academy</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/_forms.css">
+    <link rel="stylesheet" href="css/components/_tables.css">
+    <link rel="stylesheet" href="css/components/_admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Admin Login Page (Initial State) -->
+    <div class="admin-login-container" id="adminLogin">
+        <div class="admin-login-box">
+            <div class="login-header">
+                <img src="images/logo.png" alt="Dragon Media Academy" class="login-logo">
+                <h2>Admin Portal</h2>
+                <p>Enter your credentials to access the dashboard</p>
+            </div>
+            
+            <form id="adminLoginForm" class="admin-form">
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="adminUsername" name="username" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="adminPassword" name="password" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                
+                <div class="form-footer">
+                    <a href="index.html" class="text-link">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard (Hidden Initially) -->
+    <div class="admin-dashboard" id="adminDashboard" style="display:none;">
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="admin-header-left">
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="admin-header-right">
+                <div class="admin-user">
+                    <img src="images/admin-avatar.jpg" alt="Admin" class="user-avatar">
+                    <span class="user-name">Admin User</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="user-dropdown">
+                        <a href="#"><i class="fas fa-user-cog"></i> Profile</a>
+                        <a href="#" id="adminLogout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Admin Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-menu">
+                <div class="menu-header">MAIN NAVIGATION</div>
+                
+                <a href="#" class="menu-item active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                
+                <div class="menu-group">
+                    <div class="menu-header">COURSES MANAGEMENT</div>
+                    
+                    <a href="#" class="menu-item" data-section="courses">
+                        <i class="fas fa-book"></i>
+                        <span>All Courses</span>
+                    </a>
+                    
+                    <a href="#" class="menu-item" data-section="add-course">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Course</span>
+                    </a>
+                    
+                    <a href="#" class="menu-item" data-section="categories">
+                        <i class="fas fa-tags"></i>
+                        <span>Categories</span>
+                    </a>
+                </div>
+                
+                <div class="menu-group">
+                    <div class="menu-header">STUDENT MANAGEMENT</div>
+                    
+                    <a href="#" class="menu-item" data-section="students">
+                        <i class="fas fa-users"></i>
+                        <span>All Students</span>
+                    </a>
+                    
+                    <a href="#" class="menu-item" data-section="registrations">
+                        <i class="fas fa-user-plus"></i>
+                        <span>New Registrations</span>
+                    </a>
+                    
+                    <a href="#" class="menu-item" data-section="enrollments">
+                        <i class="fas fa-tasks"></i>
+                        <span>Course Enrollments</span>
+                    </a>
+                </div>
+                
+                <div class="menu-group">
+                    <div class="menu-header">CONTENT MANAGEMENT</div>
+                    
+                    <a href="#" class="menu-item" data-section="testimonials">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Testimonials</span>
+                    </a>
+                    
+                    <a href="#" class="menu-item" data-section="reviews">
+                        <i class="fas fa-star"></i>
+                        <span>Student Reviews</span>
+                    </a>
+                    
+                    <a href="#" class="menu-item" data-section="faqs">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQs</span>
+                    </a>
+                </div>
+                
+                <div class="menu-group">
+                    <div class="menu-header">SETTINGS</div>
+                    
+                    <a href="#" class="menu-item" data-section="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>System Settings</span>
+                    </a>
+                    
+                    <a href="#" class="menu-item" data-section="users">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin Users</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="admin-content">
+            <!-- Dashboard Section -->
+            <section class="content-section active" id="dashboard-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tachometer-alt"></i> Dashboard Overview</h2>
+                    <div class="breadcrumb">
+                        <a href="#">Home</a> / <span>Dashboard</span>
+                    </div>
+                </div>
+                
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,250</h3>
+                            <p>Total Students</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 12%
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>24</h3>
+                            <p>Active Courses</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 5%
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>₹2,85,000</h3>
+                            <p>Monthly Revenue</p>
+                        </div>
+                        <div class="stat-trend down">
+                            <i class="fas fa-arrow-down"></i> 3%
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon bg-danger">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>32</h3>
+                            <p>Pending Approvals</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 8%
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-row">
+                    <div class="dashboard-col">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Recent Enrollments</h3>
+                                <a href="#" class="btn-link">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Student</th>
+                                            <th>Course</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="images/students/student1.jpg" alt="Student">
+                                                    <span>Rahul Sharma</span>
+                                                </div>
+                                            </td>
+                                            <td>Full Stack Development</td>
+                                            <td>15 Jun 2023</td>
+                                            <td><span class="badge success">Active</span></td>
+                                        </tr>
+                                        <!-- More rows -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-col">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Recent Reviews</h3>
+                                <a href="#" class="btn-link">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="review-list">
+                                    <div class="review-item">
+                                        <div class="review-header">
+                                            <div class="review-user">
+                                                <img src="images/students/student2.jpg" alt="Student">
+                                                <div>
+                                                    <h4>Priya Patel</h4>
+                                                    <div class="rating">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="review-date">2 days ago</span>
+                                        </div>
+                                        <div class="review-content">
+                                            <p>The course content was excellent and the instructors were very knowledgeable...</p>
+                                        </div>
+                                        <div class="review-actions">
+                                            <button class="btn btn-small btn-success">
+                                                <i class="fas fa-check"></i> Approve
+                                            </button>
+                                            <button class="btn btn-small btn-danger">
+                                                <i class="fas fa-times"></i> Reject
+                                            </button>
+                                            <button class="btn btn-small btn-primary">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- More review items -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Management Section -->
+            <section class="content-section" id="courses-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> Course Management</h2>
+                    <div class="breadcrumb">
+                        <a href="#">Home</a> / <span>Courses</span>
+                    </div>
+                </div>
+                
+                <div class="action-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search courses...">
+                    </div>
+                    <button class="btn btn-primary" id="addCourseBtn">
+                        <i class="fas fa-plus"></i> Add New Course
+                    </button>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Course Name</th>
+                                    <th>Category</th>
+                                    <th>Duration</th>
+                                    <th>Students</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#101</td>
+                                    <td>
+                                        <div class="course-info">
+                                            <img src="images/courses/web-development.jpg" alt="Course">
+                                            <span>Full Stack Web Development</span>
+                                        </div>
+                                    </td>
+                                    <td>Development</td>
+                                    <td>3 Months</td>
+                                    <td>245</td>
+                                    <td><span class="badge success">Active</span></td>
+                                    <td>
+                                        <button class="btn-icon btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button class="btn-icon btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- More course rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add New Course Section -->
+            <section class="content-section" id="add-course-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-plus-circle"></i> Add New Course</h2>
+                    <div class="breadcrumb">
+                        <a href="#">Home</a> / <a href="#" data-section="courses">Courses</a> / <span>Add New</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <form id="addCourseForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="courseName">Course Name</label>
+                                    <input type="text" id="courseName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="courseCategory">Category</label>
+                                    <select id="courseCategory" required>
+                                        <option value="">Select Category</option>
+                                        <option value="development">Development</option>
+                                        <option value="design">Design</option>
+                                        <option value="business">Business</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="courseDuration">Duration (months)</label>
+                                    <input type="number" id="courseDuration" min="1" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="coursePrice">Price (₹)</label>
+                                    <input type="number" id="coursePrice" min="0" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="courseDescription">Description</label>
+                                <textarea id="courseDescription" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="courseImage">Course Image</label>
+                                <div class="file-upload">
+                                    <input type="file" id="courseImage" accept="image/*">
+                                    <label for="courseImage" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Choose an image...</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Course Features</label>
+                                <div class="features-list">
+                                    <div class="feature-input">
+                                        <input type="text" placeholder="Add feature">
+                                        <button type="button" class="btn-icon btn-add">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Save Course
+                                </button>
+                                <button type="reset" class="btn btn-outline">
+                                    <i class="fas fa-undo"></i> Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- More sections would be added here -->
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth/adminAuth.js"></script>
+    <script src="js/modules/admin/adminDashboard.js"></script>
+    <script src="js/modules/admin/courseManagement.js"></script>
+    <script src="js/modules/admin/studentManagement.js"></script>
+    <script src="js/modules/admin/reviewManagement.js"></script>
+</body>
+</html>

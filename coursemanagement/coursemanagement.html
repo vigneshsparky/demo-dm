@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management - Dragon Media Academy</title>
+    <link rel="stylesheet" href="coursemanagemt.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/admin.css">
+    <link rel="stylesheet" href="css/components/tables.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-dashboard">
+    <!-- Admin Header and Sidebar same as dashboard -->
+
+    <main class="admin-content">
+        <div class="content-header">
+            <h2><i class="fas fa-book"></i> Course Management</h2>
+            <div class="breadcrumb">
+                <a href="admindashboard.html">Home</a> / <span>Courses</span>
+            </div>
+        </div>
+        
+        <div class="action-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search courses..." id="courseSearch">
+            </div>
+            <a href="?action=add" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Add New Course
+            </a>
+        </div>
+        
+        <!-- Course List View -->
+        <div class="card" id="courseList">
+            <div class="card-body">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Course Name</th>
+                            <th>Category</th>
+                            <th>Duration</th>
+                            <th>Students</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <button class="btn btn-outline" id="prevPage"><i class="fas fa-chevron-left"></i></button>
+                    <span class="page-info">Page 1 of 5</span>
+                    <button class="btn btn-outline" id="nextPage"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add/Edit Course Form (Hidden by default) -->
+        <div class="card" id="courseFormContainer" style="display: none;">
+            <div class="card-body">
+                <form id="courseForm">
+                    <input type="hidden" id="courseId">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="courseTitle">Course Title</label>
+                            <input type="text" id="courseTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="courseCategory">Category</label>
+                            <select id="courseCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="development">Development</option>
+                                <option value="design">Design</option>
+                                <option value="business">Business</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="courseDescription">Description</label>
+                        <textarea id="courseDescription" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="courseDuration">Duration (weeks)</label>
+                            <input type="number" id="courseDuration" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="coursePrice">Price (₹)</label>
+                            <input type="number" id="coursePrice" min="0" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Save Course
+                        </button>
+                        <button type="button" class="btn btn-outline" id="cancelCourseForm">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="coursemanagement.js"></script>
+</body>
+</html>
