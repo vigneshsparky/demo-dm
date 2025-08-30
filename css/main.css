@@ -2793,7 +2793,11 @@ video::-webkit-media-controls {
     }
 
     .footer-newsletter form{
-        width: 200px;
+        width: 200px !important;
         
     }
+    .footer-newsletter input {
+        flex: none;
+    }
+
 }
